@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clue: Versión CETI — El Misterio de Quiyono</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="container">
+    <h1>Clue: Versión CETI — El Misterio de Quiyono</h1>
+    <p class="subtitle">Descubre <strong>culpable</strong>, <strong>arma</strong> y <strong>lugar</strong> de entre 5 historias finales. Incluye pistas, sugerencias, dificultad y puntuación.</p>
+  </header>
+
+  <main class="container grid">
+    <section class="card">
+      <h2>Personajes</h2>
+      <div id="suspectsGrid" class="grid grid-suspects"></div>
+    </section>
+
+    <section class="card">
+      <h2>Armas</h2>
+      <ul id="weaponsList" class="chips"></ul>
+      <h2 style="margin-top:1rem">Lugares</h2>
+      <ul id="placesList" class="chips"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Controles</h2>
+      <div class="controls">
+        <label> Dificultad:
+          <select id="difficulty">
+            <option value="FACIL">Fácil</option>
+            <option value="NORMAL" selected>Normal</option>
+            <option value="DIFICIL">Difícil</option>
+          </select>
+        </label>
+        <button id="newGame">🎲 Nueva partida</button>
+      </div>
+
+      <div class="controls suggest">
+        <h3>Sugerir (preguntar)</h3>
+        <div class="row">
+          <label>Sospechoso:
+            <select id="selSus"></select>
+          </label>
+          <label>Arma:
+            <select id="selWeapon"></select>
+          </label>
+          <label>Lugar:
+            <select id="selPlace"></select>
+          </label>
+        </div>
+        <button id="btnSuggest">🃏 Sugerir</button>
+      </div>
+
+      <div class="controls accuse">
+        <h3>Acusar (resolver)</h3>
+        <div class="row">
+          <label>Sospechoso:
+            <select id="accSus"></select>
+          </label>
+          <label>Arma:
+            <select id="accWeapon"></select>
+          </label>
+          <label>Lugar:
+            <select id="accPlace"></select>
+          </label>
+        </div>
+        <button id="btnAccuse">⚖️ Acusar</button>
+      </div>
+
+      <div class="controls hints">
+        <h3>Pistas</h3>
+        <button id="btnGlobalHint">💡 Pista global</button>
+        <button id="btnReveal">👀 Revelar solución</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Descartes</h2>
+      <div id="discards">
+        <p><strong>Sospechosos:</strong> <span id="discSus">—</span></p>
+        <p><strong>Armas:</strong> <span id="discArm">—</span></p>
+        <p><strong>Lugares:</strong> <span id="discPla">—</span></p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Estadísticas</h2>
+      <ul id="stats" class="stats"></ul>
+    </section>
+
+    <section class="card span-2">
+      <h2>Registro</h2>
+      <div id="log" class="log"></div>
+    </section>
+
+    <section class="card span-2" id="narrativeCard" style="display:none">
+      <h2>🧩 Narrativa del caso</h2>
+      <p id="narrativeText"></p>
+    </section>
+  </main>
+
+  <footer class="container">
+    <p>Para usar fotos reales, reemplaza las imágenes en <code>assets/personajes/</code> y edita los nombres de archivo en <code>script.js</code> (propiedad <code>img</code> de cada personaje).</p>
+  <p style="text-align:center;margin-top:8px;color:#003366;font-weight:600">Desarrollado por Gael A. Silva Huacuja — CETI Colomos</p>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

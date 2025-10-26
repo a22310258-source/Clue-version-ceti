@@ -1,0 +1,41 @@
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans','Apple Color Emoji','Segoe UI Emoji';color:#0f172a;background:#f1f5f9}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+header h1{margin:.2rem 0}
+.subtitle{margin:.2rem 0 1rem;color:#475569}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.grid .span-2{grid-column:span 2}
+.card{background:#fff;border-radius:16px;padding:16px;box-shadow:0 8px 20px rgba(15,23,42,.07)}
+.grid-suspects{grid-template-columns:repeat(5,1fr);gap:12px}
+.sus-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:8px;text-align:center}
+.sus-card img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;border:1px solid #cbd5e1;background:#e2e8f0}
+.sus-card .name{font-weight:700;margin-top:6px}
+.sus-card .role{font-size:.85rem;color:#475569}
+.chips{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none}
+.chips li{background:#e2e8f0;border:1px solid #cbd5e1;border-radius:999px;padding:6px 10px}
+.controls{margin:.5rem 0;display:flex;flex-direction:column;gap:8px}
+.controls .row{display:flex;gap:8px;flex-wrap:wrap}
+.controls select, .controls button{padding:8px 10px;border-radius:10px;border:1px solid #cbd5e1;background:#f8fafc}
+.controls button{cursor:pointer;background:#0ea5e9;border-color:#0284c7;color:white;font-weight:600}
+.controls button:hover{filter:brightness(.95)}
+.stats{list-style:none;padding:0;margin:0}
+.stats li{padding:6px 0;border-bottom:1px dashed #e2e8f0}
+.log{min-height:140px;max-height:260px;overflow:auto;background:#0b1220;color:#e2e8f0;border-radius:10px;padding:12px;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,'Liberation Mono','Courier New',monospace}
+.log p{margin:.2rem 0}
+footer{color:#475569}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.grid .span-2{grid-column:span 1}.grid-suspects{grid-template-columns:repeat(3,1fr)}}
+
+
+:root {
+  --ceti-blue: #003366;
+  --ceti-light: #e0ecf8;
+}
+
+body { background: var(--ceti-light); color: #0f172a; }
+header h1, footer p { color: var(--ceti-blue); }
+.controls button {
+  background: var(--ceti-blue);
+  border-color: #00264d;
+}
+.controls button:hover {
+  background: #005b96;
+}
